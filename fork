@@ -1,0 +1,9 @@
+from datetime import datetime
+import pytz
+utc = pytz.utc
+pacific = pytz.timezone('US/Pacific')
+
+# Get the current time in UTC
+now_utc = datetime.now(utc)
+
+now_pacific = now_utc.astimezone(pacific)
